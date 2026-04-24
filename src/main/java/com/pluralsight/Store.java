@@ -1,7 +1,10 @@
 
 package com.pluralsight;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -58,6 +61,19 @@ public class Store {
     public static void loadInventory(String fileName, ArrayList<Product> inventory) {
         // TODO: read each line, split on "|",
         //       create a Product object, and add it to the inventory list
+        try{
+            BufferedReader reader = new BufferedReader(new FileReader(fileName));
+            String line;
+            //While loop to split id, name, and price to make object
+            while((line = reader.readLine()) != null){
+                String[] part = line.split("\\|");
+                String id = part[0];
+                String name = part[1];
+                double price = Double.parseDouble(part[2]);
+
+
+            }
+        }catch (Exception e){}
     }
 
     /**
