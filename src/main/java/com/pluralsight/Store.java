@@ -70,9 +70,12 @@ public class Store {
                 String id = part[0];
                 String name = part[1];
                 double price = Double.parseDouble(part[2]);
-
-
+                //add info to make new object
+                Product product = new Product(id, name, price);
+                //add new objects from .csv to add to inventory
+                inventory.add(product);
             }
+            reader.close();
         }catch (Exception e){}
     }
 

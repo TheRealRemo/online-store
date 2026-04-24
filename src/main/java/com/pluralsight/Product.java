@@ -34,7 +34,7 @@ public class Product {
         this.name = name;
         this.price = price;
     }
-
+//to update toString() method with preferences
     @Override
     public String toString() {
         return String.format("ID: %s | Name: %s | Price: $%.2f",
