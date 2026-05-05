@@ -50,33 +50,24 @@ public class Store {
         scanner.close();
     }
 
-    /**
-     * Reads product data from a file and populates the inventory list.
-     * File format (pipe-delimited):
-     * id|name|price
-     * <p>
-     * Example line:
-     * A17|Wireless Mouse|19.99
-     */
     public static void loadInventory(String fileName, ArrayList<Product> inventory) {
-        // TODO: read each line, split on "|",
-        //       create a Product object, and add it to the inventory list
-        try{
+        try {
             BufferedReader reader = new BufferedReader(new FileReader(fileName));
             String line;
             //While loop to split id, name, and price to make object
-            while((line = reader.readLine()) != null){
+            while ((line = reader.readLine()) != null) {
                 String[] part = line.split("\\|");
                 String id = part[0];
                 String name = part[1];
                 double price = Double.parseDouble(part[2]);
                 //add info to make new object
-                Product product = new Product(id, name, price);
+                Product p = new Product(id, name, price);
                 //add new objects from .csv to add to inventory
-                inventory.add(product);
+                inventory.add(p);
             }
             reader.close();
-        }catch (Exception e){}
+        } catch (Exception e) {
+        }
     }
 
     /**
@@ -88,7 +79,23 @@ public class Store {
                                        Scanner scanner) {
         // TODO: show each product (id, name, price),
         //       prompt for an id, find that product, add to cart
+        for (Product p : inventory) {
+            System.out.println(p);
+        }
+        System.out.println("=================================================================");
+        System.out.print("Please type ID to add item to cart or return to main menu (X): ");
+        String idInput = scanner.nextLine();
+        if (idInput.equalsIgnoreCase("X")) {
+            return;
+        }
+        //will take input and put it into idInput and compare it to what
+        // is in the inventory array list ending in it being put into selectedProduct
+      Product selectedProduct = findProductById(idInput,inventory);
+        System.out.println("\nYou have added " + selectedProduct + " To your cart!");
+        cart.add(selectedProduct);
+
     }
+
 
     /**
      * Shows the contents of the cart, calculates the total,
@@ -121,9 +128,13 @@ public class Store {
      * @return the matching Product, or null if not found
      */
     public static Product findProductById(String id, ArrayList<Product> inventory) {
-        // TODO: loop over the list and compare ids
+        for (Product p : inventory)
+            if (p.getId().equalsIgnoreCase(id)) {
+                return p;
+            }
         return null;
     }
 }
+
 
  
