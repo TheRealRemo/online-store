@@ -90,8 +90,8 @@ public class Store {
         }
         //will take input and put it into idInput and compare it to what
         // is in the inventory array list ending in it being put into selectedProduct
-      Product selectedProduct = findProductById(idInput,inventory);
-        System.out.println("\nYou have added " + selectedProduct + " To your cart!");
+        Product selectedProduct = findProductById(idInput, inventory);
+        System.out.println("\nYou have added " + "\"" +selectedProduct.getName() + "\"" + " To your cart!");
         cart.add(selectedProduct);
 
     }
@@ -107,6 +107,9 @@ public class Store {
         //   • compute the total cost
         //   • ask the user whether to check out (C) or return (X)
         //   • if C, call checkOut(cart, totalAmount, scanner)
+        for (Product product: cart){
+            System.out.println(product.getName() + " " + product.getPrice());
+        }
     }
 
     /**
