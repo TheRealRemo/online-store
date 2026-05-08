@@ -160,12 +160,19 @@ public class Store {
                 if (payment < totalAmount){
                     System.out.println("Insufficient funds, please try again");
                 }
+                else if (payment == totalAmount || payment > totalAmount){
+                    double change = payment - totalAmount;
+                    System.out.println("\nChange: " + "$" + change + "\n");
+                    System.out.println("Items purchased:");
+                    for (Product product : cart){
+                        System.out.println(product.getName() + " " + "$" + product.getPrice());
+                    }
+                    System.out.println("Thank you for your purchase!");
+                    cart.clear();
+                }
 
             }
         }
-            /*{
-            System.out.println("       Receipt      ");
-            System.out.println("---------------------");*/
 
     }
 
