@@ -132,7 +132,7 @@ public class Store {
         if (idInput.equalsIgnoreCase("X")) {
             return;
         } else if (idInput.equalsIgnoreCase("C")) {
-            checkOut();
+            checkOut(cart, totalCost, scanner);
         }
 
     }
@@ -155,8 +155,11 @@ public class Store {
         double payment = 0;
         if (input.equalsIgnoreCase("Y")) {
             while (payment < totalAmount) {
-                System.out.println("Please enter payment amount: ");
+                System.out.print("Please enter payment amount: ");
                 payment = scanner.nextDouble();
+                if (payment < totalAmount){
+                    System.out.println("Insufficient funds, please try again");
+                }
 
             }
         }
@@ -165,7 +168,7 @@ public class Store {
             System.out.println("---------------------");*/
 
     }
-}
+
 
 /**
  * Searches a list for a product by its id.
