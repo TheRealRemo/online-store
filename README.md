@@ -1,21 +1,19 @@
-# Project Title
 
-## Description of the Project
+## Online Store
 
-Briefly describe what this Java console application does. Mention its purpose and who the intended users are. Explain the main functionality and what problems it aims to solve.
+
+The purpose of the Online Store CLI Application is to provide users with a system to purchase items from a catalog linked to a file of choice with products.
+Embedded is the functionality to display the list a products, add products to a cart, display the cart, and purchase the products with receipt functionality.
+The Online Store is set up with an interface with ease of use and simple prompts for input ensuring ease of access for all. 
 
 ## User Stories
 
-List the user stories that guided the development of your application. Format these stories as: "As a [type of user], I want [some goal] so that [some reason]."
 
 - As a customer, I want an application to be able to see a list of items displayed so that I can pick products to purchase
 - As a customer, I want to be able to add products to my cart.
 - As a customer, I want to be able to search for an item, to see exactly what I want
 - As a customer, I would like to be able to receive a sales receipt, so that I can see my total after purchases
 
-## Setup
-
-Instructions on how to set up and run the project using IntelliJ IDEA.
 
 ### Prerequisites
 
@@ -30,12 +28,11 @@ Follow these steps to get your application running within IntelliJ IDEA:
 2. Select "Open" and navigate to the directory where you cloned or downloaded the project.
 3. After the project opens, wait for IntelliJ to index the files and set up the project.
 4. Find the main class with the `public static void main(String[] args)` method.
-5. Right-click on the file and select 'Run 'YourMainClassName.main()'' to start the application.
+5. Right-click on the file and select 'Run 'Store.main()'' to start the application.
 
 ## Technologies Used
 
-- Java: Mention the version you are using.
-- Any additional libraries or frameworks used in the project.
+- Java: Amazon Corretto-17
 
 ## Demo
 
@@ -45,27 +42,22 @@ Include screenshots or GIFs that show your application in action. Use tools like
 
 ## Future Work
 
-Outline potential future enhancements or functionalities you might consider adding:
 
-- Additional feature to be developed.
-- Improvement of current functionalities.
+- Better Error Messaging and Implementation
+- Cleaner UI
+- Implementation of adding multiple of the same items on one line with quantity
+- Addition of saving all receipt information to sales receipt file
 
 ## Resources
 
-List resources such as tutorials, articles, or documentation that helped you during the project.
 
-- [Java Programming Tutorial](https://www.example.com)
-- [Effective Java](https://www.example.com)
 
-## Team Members
+- [Java Prompt & Flow Logic Conversation](https://chatgpt.com/share/69fd6c71-4598-83ea-a462-c0ea9f2562c3)
 
-- **Name 1** - Specific contributions or roles.
-- **Name 2** - Specific contributions or roles.
+
 
 ## Thanks
 
-Express gratitude towards those who provided help, guidance, or resources:
+- Thank you to Potato Sensei for staying fresh and crispy. Also for being a huge encouragement to improve in my Java development. 
 
-- Thank you to [Mentor's Name] for continuous support and guidance.
-- A special thanks to all teammates for their dedication and teamwork.
  
