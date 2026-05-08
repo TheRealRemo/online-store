@@ -127,7 +127,7 @@ public class Store {
                 checkOut(cart, totalCost, scanner);
             }
         } catch (Exception e) {
-            System.out.println("Invalid input, please try again");
+            System.out.println("Input Error, please try again");
         }
 
     }
@@ -150,11 +150,8 @@ public class Store {
             System.out.print("Would you like to proceed with purchase?(Y/N): ");
             input = scanner.nextLine();
 
-            System.out.println("Invalid Input, please try again");
-            ;
-
-
             double payment = 0;
+
             if (input.equalsIgnoreCase("Y")) {
                 while (payment < totalAmount) {
                     System.out.print("Please enter payment amount: ");
